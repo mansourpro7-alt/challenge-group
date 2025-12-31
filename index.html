@@ -2,46 +2,59 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Challenge Group | Cabinet de mise en relation</title>
+<title>Challenge Group</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Style CSS -->
 <style>
+/* ===== Général ===== */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f4f6f8;
+  font-family: 'Arial', sans-serif;
+  background: #f0f2f5;
   color: #333;
 }
+
+/* ===== Header ===== */
 header {
   background: #0a2540;
   color: white;
-  padding: 25px;
-  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
 }
-.logo {
-  font-size: 32px;
+header .logo {
+  font-size: 28px;
   font-weight: bold;
   letter-spacing: 2px;
-  font-family: 'Trebuchet MS', sans-serif;
   text-transform: uppercase;
 }
-nav {
-  margin-top: 10px;
-}
-nav a {
+header nav a {
   color: white;
-  margin: 0 15px;
+  margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
+header nav a:hover {
+  color: #1e90ff;
+}
+
+/* ===== Section ===== */
 section {
-  padding: 40px;
-  max-width: 1000px;
+  padding: 60px 20px;
+  max-width: 1100px;
   margin: auto;
 }
 h2 {
   color: #0a2540;
   margin-bottom: 20px;
 }
+
+/* ===== Services ===== */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -51,54 +64,74 @@ h2 {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
+
+/* ===== Bouton ===== */
 .btn {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 25px;
   background-color: #1e90ff;
   color: white;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
+  transition: background 0.3s;
 }
 .btn:hover {
   background-color: #0a2540;
 }
+
+/* ===== Formulaire ===== */
 input, textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 8px 0;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 button {
-  padding: 12px 20px;
+  padding: 12px 25px;
   background-color: #1e90ff;
   color: white;
   border: none;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s;
 }
 button:hover {
   background-color: #0a2540;
 }
+
+/* ===== Footer ===== */
 footer {
   background: #222;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   font-size: 14px;
+}
+
+/* ===== Animations simples ===== */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 </style>
 </head>
+
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <div class="logo">CHALLENGE GROUP</div>
   <nav>
@@ -109,7 +142,8 @@ footer {
   </nav>
 </header>
 
-<section id="accueil">
+<!-- ===== ACCUEIL ===== -->
+<section id="accueil" class="fade-in">
   <h2>Cabinet de mise en relation & intermédiation</h2>
   <p>
     Challenge Group accompagne les entreprises et professionnels
@@ -118,7 +152,8 @@ footer {
   </p>
 </section>
 
-<section id="services">
+<!-- ===== SERVICES ===== -->
+<section id="services" class="fade-in">
   <h2>Nos services</h2>
   <div class="services">
     <div class="card">
@@ -136,7 +171,8 @@ footer {
   </div>
 </section>
 
-<section id="apropos">
+<!-- ===== À PROPOS ===== -->
+<section id="apropos" class="fade-in">
   <h2>À propos de Challenge Group</h2>
   <p>
     Challenge Group est un cabinet indépendant spécialisé
@@ -145,7 +181,8 @@ footer {
   </p>
 </section>
 
-<section id="contact">
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="fade-in">
   <h2>Contactez-nous</h2>
   <a href="mailto:contact@challenge-group.com" class="btn">Envoyer un email</a>
   <form action="mailto:contact@challenge-group.com" method="post" enctype="text/plain">
@@ -156,171 +193,7 @@ footer {
   </form>
 </section>
 
-<footer>
-  © 2025 Challenge Group – Tous droits réservés
-</footer>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Challenge Group | Cabinet de mise en relation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f6f8;
-  color: #333;
-}
-header {
-  background: #0a2540;
-  color: white;
-  padding: 25px;
-  text-align: center;
-}
-.logo {
-  font-size: 32px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-family: 'Trebuchet MS', sans-serif;
-  text-transform: uppercase;
-}
-nav {
-  margin-top: 10px;
-}
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-section {
-  padding: 40px;
-  max-width: 1000px;
-  margin: auto;
-}
-h2 {
-  color: #0a2540;
-  margin-bottom: 20px;
-}
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #1e90ff;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-.btn:hover {
-  background-color: #0a2540;
-}
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-button {
-  padding: 12px 20px;
-  background-color: #1e90ff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #0a2540;
-}
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-}
-</style>
-</head>
-<body>
-
-<header>
-  <div class="logo">CHALLENGE GROUP</div>
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#services">Services</a>
-    <a href="#apropos">À propos</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section id="accueil">
-  <h2>Cabinet de mise en relation & intermédiation</h2>
-  <p>
-    Challenge Group accompagne les entreprises et professionnels
-    dans la mise en relation stratégique, l’intermédiation commerciale
-    et le développement d’opportunités durables.
-  </p>
-</section>
-
-<section id="services">
-  <h2>Nos services</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Mise en relation professionnelle</h3>
-      <p>Identification et connexion de partenaires fiables selon vos objectifs business.</p>
-    </div>
-    <div class="card">
-      <h3>Intermédiation</h3>
-      <p>Accompagnement neutre et confidentiel dans les négociations et collaborations.</p>
-    </div>
-    <div class="card">
-      <h3>Conseil stratégique</h3>
-      <p>Analyse des besoins, positionnement et structuration des relations professionnelles.</p>
-    </div>
-  </div>
-</section>
-
-<section id="apropos">
-  <h2>À propos de Challenge Group</h2>
-  <p>
-    Challenge Group est un cabinet indépendant spécialisé
-    dans les services de mise en relation et d’intermédiation.
-    Notre approche repose sur la confidentialité, la rigueur et la création de valeur à long terme.
-  </p>
-</section>
-
-<section id="contact">
-  <h2>Contactez-nous</h2>
-  <a href="mailto:contact@challenge-group.com" class="btn">Envoyer un email</a>
-  <form action="mailto:contact@challenge-group.com" method="post" enctype="text/plain">
-    <input type="text" name="Nom" placeholder="Votre nom" required>
-    <input type="email" name="Email" placeholder="Votre email" required>
-    <textarea name="Message" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
-</section>
-
+<!-- ===== FOOTER ===== -->
 <footer>
   © 2025 Challenge Group – Tous droits réservés
 </footer>
